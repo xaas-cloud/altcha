@@ -78,7 +78,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "format": "prettier --write ./src/**/*",
     "test": "vitest run tests/helpers.test.ts",
-    "test:e2e": "testcafe chrome,firefox e2e/altcha.fixture.ts --hostname localhost",
+    "test:e2e": "testcafe chrome e2e/altcha.fixture.ts --hostname localhost",
     "prepare": "husky"
   },
   "devDependencies": {

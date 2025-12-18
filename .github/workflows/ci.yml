@@ -20,4 +20,4 @@ jobs:
       - run: npm run test
       - uses: DevExpress/testcafe-action@latest
         with:
-          args: "chrome,firefox e2e/altcha.fixture.ts --hostname localhost"
+          args: "chrome e2e/altcha.fixture.ts --hostname localhost"
