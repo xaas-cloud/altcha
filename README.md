@@ -9,6 +9,16 @@ ALTCHA is fully compliant with:
 
 For more details, visit [altcha.org](https://altcha.org).
 
+> [!NOTE]
+> **Breaking change (v2.3.0)**
+>
+> As of version **2.3.0**, the obfuscation and other plugins have been removed from the main package and moved to a separate package: `@altcha/plugins`.
+>
+> If you do not use any plugins, no changes are required.
+>
+> See the [migration guide for v2.3.0](https://github.com/altcha-org/altcha/blob/main/MIGRATION-v2.3.0.md).
+
+
 ## Features
 
 - **Frictionless Experience**: Uses proof-of-work (PoW) instead of visual puzzles for a seamless user experience.
@@ -60,7 +70,7 @@ Explore starter templates for popular frameworks:
 
 ## Plugins & CMS
 
-- [Libraries and plugins](https://altcha.org/docs/integrations/)
+- [Libraries and plugins](https://altcha.org/docs/v2/libraries/)
 
 ## Usage
 
@@ -103,11 +113,11 @@ Or load via `<script>` tag:
 </form>
 ```
 
-See [configuration options](#configuration) or the [website integration docs](https://altcha.org/docs/website-integration).
+See [configuration options](#configuration) or the [website integration docs](https://altcha.org/docs/v2/widget-integration).
 
 ### 3. Integrate with Your Server
 
-Refer to the [server documentation](https://altcha.org/docs/server-integration) for implementation details.
+Refer to the [server documentation](https://altcha.org/docs/v2/server-integration) for implementation details.
 
 ## Supported Browsers
 
@@ -141,7 +151,7 @@ When GZIPped, it totals about 30 kB, making ALTCHA’s widget about 90% smaller 
 
 ## Content Security Policy (CSP)
 
-The default bundle includes styles and workers in a single file. For strict CSP compliance, use scripts from `/dist_external`. Learn more in the [documentation](https://altcha.org/docs/website-integration).
+The default bundle includes styles and workers in a single file. For strict CSP compliance, use scripts from `/dist_external`. Learn more in the [documentation](https://altcha.org/docs/v2/widget-integration).
 
 ## Configuration
 
@@ -172,14 +182,14 @@ Additional options:
 - **name**: Name of the hidden field containing the payload (defaults to "altcha").
 - **overlay**: Enables overlay UI mode (automatically sets `auto="onsubmit"`).
 - **overlaycontent**: CSS selector of the HTML element to display in the overlay modal before the widget.
-- **strings**: JSON-encoded translation strings. Refer to [customization](https://altcha.org/docs/widget-customization).
+- **strings**: JSON-encoded translation strings. Refer to [customization](https://altcha.org/docs/v2/widget-customization).
 - **verifyurl**: URL for server-side verification requests. This option is automatically configured with Sentinel. Override this setting only if using a custom server implementation. Supports `fn:function_name` format to call a global JS function instead.
 - **workers**: Number of workers to utilize for PoW (defaults to `navigator.hardwareConcurrency || 8`, max value `16`).
 - **workerurl**: URL of the Worker script (defaults to `./worker.js`, only works with `external` build).
 
 Data Obfuscation options:
 
-- **obfuscated**: The [obfuscated data](https://altcha.org/docs/obfuscation) provided as a base64-encoded string (requires `altcha/obfuscation` plugin). Use only without `challengeurl`/`challengejson`.
+- **obfuscated**: The [obfuscated data](https://altcha.org/docs/v2/obfuscation) provided as a base64-encoded string (requires `altcha/obfuscation` plugin). Use only without `challengeurl`/`challengejson`.
 
 Development / Testing options:
 

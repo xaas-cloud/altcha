@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   build: {
     target: 'baseline-widely-available',
-    outDir: 'dist_plugins',
+    outDir: 'dist',
     minify: 'esbuild',
     emptyOutDir: false,
     lib: {
